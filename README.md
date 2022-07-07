@@ -4,7 +4,8 @@
 
 ```sh
 $ docker ps
-#-a lista todos os containers
+# -a lista todos os containers
+# -q lista somente os ids do containers
 
 $ docker run hello-world
 $ docker run -it ubuntu bash
@@ -17,6 +18,7 @@ $ docker run -it ubuntu bash
 
 $ docker run -d --name nginx -p 8080:80 nginx
 
+$ docker rm $(docker ps -aq) -f
 $ docker rm d79bf4a65267
 # -f força a remoção do container
 
